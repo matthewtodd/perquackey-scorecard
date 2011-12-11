@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+  <body>
+    <script type="text/html">
+      {{view Perquackey.Field listBinding="Perquackey.list"}}
+
+      {{#view Perquackey.Table listBinding="Perquackey.list" tagName="table"}}
+        <thead>
+          {{#each headers tagName="tr" itemTagName="th"}}
+            {{this}}
+          {{/each}}
+        </thead>
+
+        {{#each rows tagName="tbody"}}
+          {{#each words tagName="tr" itemTagName="td"}}
+            {{content}}
+          {{/each}}
+        {{/each}}
+      {{/view}}
+    </script>
+
+    <script src="jquery.js"></script>
+    <script src="sproutcore.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
