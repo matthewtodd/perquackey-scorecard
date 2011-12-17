@@ -11,9 +11,7 @@
 #   - dist/**/*.js
 #
 src_files:
-    - public/javascripts/jquery-*.js
-    - public/javascripts/ember-*.js
-    - public/javascripts/*.js
+    - "**/*.*"
 
 # stylesheets
 #
@@ -61,7 +59,10 @@ spec_files:
 #
 # src_dir: public
 #
-src_dir:
+src_dir: app/assets/javascripts
+
+asset_paths:
+    - vendor/assets/javascripts
 
 # spec_dir
 #
