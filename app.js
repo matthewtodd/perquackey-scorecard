@@ -1,10 +1,10 @@
-Perquackey = SC.Application.create();
+Perquackey = Ember.Application.create();
 
-Perquackey.list = SC.ArrayProxy.create({
+Perquackey.list = Ember.ArrayProxy.create({
   content: []
 });
 
-Perquackey.Field = SC.TextField.extend({
+Perquackey.Field = Ember.TextField.extend({
   insertNewline: function() {
     var word = this.get('value');
 
@@ -15,14 +15,14 @@ Perquackey.Field = SC.TextField.extend({
   }
 });
 
-Perquackey.Table = SC.View.extend({
+Perquackey.Table = Ember.View.extend({
   tagName: 'table',
 
   didInsertElement: function() {
     this._updateElementInnerHtml();
   },
 
-  _updateElementInnerHtml: SC.observer(function() {
+  _updateElementInnerHtml: Ember.observer(function() {
     this.$().empty();
 
     var $thead = this.$('<thead/>');
