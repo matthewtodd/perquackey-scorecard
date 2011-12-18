@@ -3,6 +3,11 @@
   <body>
     <script type="text/html">
       {{view Perquackey.Field listBinding="Perquackey.list"}}
+
+      {{#view Ember.View contentBinding="Perquackey.list"}}
+        Score: {{content.score}}
+      {{/view}}
+
       {{view Perquackey.Table listBinding="Perquackey.list"}}
     </script>
 
