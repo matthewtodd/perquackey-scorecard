@@ -2,7 +2,7 @@ describe('Perquackey.List', function() {
   var list;
 
   beforeEach(function() {
-    list = Perquackey.List.create({ content: [] });
+    list = Perquackey.List.create();
   });
 
   describe('#score', function() {
