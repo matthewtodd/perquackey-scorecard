@@ -1,6 +1,18 @@
 //= require perquackey
 
 Perquackey.List = Ember.ArrayProxy.extend({
+  add: function(word) {
+    this.pushObject(word);
+  },
+
+  forEach: function(iterator) {
+    this._super(iterator);
+  },
+
+  getEach: function(key) {
+    return this._super(key);
+  },
+
   score: function() {
     var score = 0;
 

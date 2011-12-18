@@ -5,7 +5,7 @@ Perquackey.Field = Ember.TextField.extend({
     var word = this.get('value');
 
     if (word) {
-      this.get('list').pushObject(word);
+      this.get('list').add(word);
       this.set('value', '');
     }
   }
