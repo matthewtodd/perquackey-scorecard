@@ -1,5 +1,10 @@
+- acceptance tests. I'm manually testing too much.
+
 - prevent duplicates
 - prevent {,s}
+- prevent too short / too long
+- prevent unknown words
+
 - strip spaces
 
 - double-click to (de-)pluralize
