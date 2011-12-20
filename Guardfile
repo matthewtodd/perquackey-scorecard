@@ -9,7 +9,8 @@ guard 'jasmine-headless-webkit' do
   watch(%r{^spec/unit/(.*)_spec\..*})   { |m| newest_js_file(spec_location % m[1]) }
 end
 
-guard 'rspec', :version => 2 do
+guard 'rspec', :cli => '-r turnip', :version => 2 do
+  watch(%r{^spec/.+\.feature$})
   watch(%r{^spec/.+_spec\.rb$})
   watch(%r{^lib/(.+)\.rb$})     { |m| "spec/lib/#{m[1]}_spec.rb" }
   watch('spec/spec_helper.rb')  { "spec" }

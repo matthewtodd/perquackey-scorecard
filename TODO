@@ -1,5 +1,3 @@
-- acceptance tests. I'm manually testing too much.
-
 - prevent duplicates
 - prevent {,s}
 - prevent too short / too long
