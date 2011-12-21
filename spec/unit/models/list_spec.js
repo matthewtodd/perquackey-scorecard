@@ -5,6 +5,14 @@ describe('Perquackey.List', function() {
     list = Perquackey.List.create();
   });
 
+  describe('#add', function() {
+    it('prevents duplicates', function() {
+      list.add('pot');
+      list.add('pot');
+      expect(list.toArray()).toEqual('pot'.w());
+    });
+  });
+
   describe('#score', function() {
     it('defaults to zero', function() {
       expect(list.get('score')).toBe(0);

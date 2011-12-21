@@ -6,7 +6,9 @@ Perquackey.List = Ember.ArrayProxy.extend({
   },
 
   add: function(word) {
-    this.pushObject(word);
+    if (!this.contains(word)) {
+      this.pushObject(word);
+    }
   },
 
   forEach: function(iterator) {
