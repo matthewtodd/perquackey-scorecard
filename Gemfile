@@ -4,10 +4,12 @@ gem 'rack'
 gem 'sprockets'
 
 group :development do
+  gem 'growl_notify'
   gem 'guard'
   gem 'guard-bundler'
   gem 'guard-jasmine-headless-webkit'
   gem 'guard-rspec'
+  gem 'heroku'
 end
 
 group :test do
