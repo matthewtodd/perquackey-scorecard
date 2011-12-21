@@ -1,6 +1,7 @@
-- prevent unknown words
+- double-click to delete
+- click to (de-)pluralize
 
-- double-click to (de-)pluralize
-- ? to delete
+- prevent unknown words
+- look up other potential matches
 
 - timer
