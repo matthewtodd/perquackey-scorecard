@@ -11,6 +11,18 @@ describe('Perquackey.List', function() {
       list.add('pot');
       expect(list.toArray()).toEqual('pot'.w());
     });
+
+    it('removes singulars when pluralizing', function() {
+      list.add('pot');
+      list.add('pots');
+      expect(list.toArray()).toEqual('pots'.w());
+    });
+
+    it('removes plurals when singularizing', function() {
+      list.add('pots');
+      list.add('pot');
+      expect(list.toArray()).toEqual('pot'.w());
+    });
   });
 
   describe('#score', function() {

@@ -7,6 +7,10 @@ Perquackey.List = Ember.ArrayProxy.extend({
 
   add: function(word) {
     if (!this.contains(word)) {
+      if (word[word.length - 1] == 's') {
+        this.removeObject(word.slice(0, word.length - 1));
+      }
+      this.removeObject(word + 's');
       this.pushObject(word);
     }
   },
