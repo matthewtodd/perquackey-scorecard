@@ -23,6 +23,16 @@ describe('Perquackey.List', function() {
       list.add('pot');
       expect(list.toArray()).toEqual('pot'.w());
     });
+
+    it('rejects words that are too short', function() {
+      list.add('be');
+      expect(list.toArray()).toEqual([]);
+    });
+
+    it('rejects words that are too long', function() {
+      list.add('obstinately');
+      expect(list.toArray()).toEqual([]);
+    });
   });
 
   describe('#score', function() {
