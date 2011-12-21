@@ -6,6 +6,8 @@ Perquackey.List = Ember.ArrayProxy.extend({
   },
 
   add: function(word) {
+    word = word.trim();
+
     if (word.length < 3 || word.length > 10) {
       return;
     }

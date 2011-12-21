@@ -33,6 +33,11 @@ describe('Perquackey.List', function() {
       list.add('obstinately');
       expect(list.toArray()).toEqual([]);
     });
+
+    it('strips spaces', function() {
+      list.add(' pot ');
+      expect(list.toArray()).toEqual('pot'.w());
+    });
   });
 
   describe('#score', function() {
