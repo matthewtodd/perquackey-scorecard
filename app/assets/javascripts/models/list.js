@@ -43,7 +43,7 @@ Perquackey.List = Ember.ArrayProxy.extend({
       if (seen[length] === undefined) {
         seen[length] = 1;
         score += firstWordScores[length];
-      } else {
+      } else if (seen[length] < 5) {
         seen[length] += 1;
         score += additionalWordScores[length];
       }

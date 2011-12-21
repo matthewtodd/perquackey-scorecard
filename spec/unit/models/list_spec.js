@@ -56,6 +56,16 @@ describe('Perquackey.List', function() {
       expect(list.get('score')).toBe(70);
     });
 
+    it('stops at 100 points for more than 5 three-letter words', function() {
+      list.add('pot');
+      list.add('pat');
+      list.add('tap');
+      list.add('top');
+      list.add('hot');
+      list.add('hat');
+      expect(list.get('score')).toBe(100);
+    });
+
     it('gives 120 points for the first 4-letter word', function() {
       list.add('goat');
       expect(list.get('score')).toBe(120);
@@ -65,6 +75,16 @@ describe('Perquackey.List', function() {
       list.add('goat');
       list.add('tree');
       expect(list.get('score')).toBe(140);
+    });
+
+    it('stops at 200 points for more than 5 four-letter words', function() {
+      list.add('goat');
+      list.add('tree');
+      list.add('tear');
+      list.add('pear');
+      list.add('hear');
+      list.add('peat');
+      expect(list.get('score')).toBe(200);
     });
 
     it('gives 300 extra points for the 3-4 bonus', function() {
