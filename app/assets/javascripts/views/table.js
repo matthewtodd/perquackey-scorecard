@@ -3,6 +3,14 @@
 Perquackey.Table = Ember.View.extend({
   tagName: 'table',
 
+  click: function(e) {
+    var $target = $(e.target);
+    if ($target.is('td')) {
+      this.get('delegate').wordWasClicked($target.text());
+      return false;
+    }
+  },
+
   didInsertElement: function() {
     this._updateElementInnerHtml();
   },

@@ -29,6 +29,12 @@ Perquackey.List = Ember.ArrayProxy.extend({
     return this._super(key);
   },
 
+  // TODO this is not the right place for this function. I probably want a
+  // controller.
+  wordWasClicked: function(word) {
+    this.removeObject(word);
+  },
+
   score: function() {
     var score = 0;
 
