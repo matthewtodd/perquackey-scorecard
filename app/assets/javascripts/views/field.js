@@ -1,7 +1,8 @@
 //= require perquackey
 
 Perquackey.Field = Ember.TextField.extend({
-  attributeBindings: 'name type value'.w(),
+  attributeBindings: 'autofocus name type value'.w(),
+  autofocus: true,
   name: 'word',
 
   insertNewline: function() {
