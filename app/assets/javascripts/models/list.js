@@ -8,7 +8,7 @@ Perquackey.List = Ember.ArrayProxy.extend({
   add: function(word) {
     word = word.trim();
 
-    if (word.length < 3 || word.length > 10) {
+    if (!word.match(/^[a-z]{3,10}$/)) {
       return;
     }
 

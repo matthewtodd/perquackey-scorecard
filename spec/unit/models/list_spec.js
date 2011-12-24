@@ -34,6 +34,11 @@ describe('Perquackey.List', function() {
       expect(list.toArray()).toEqual([]);
     });
 
+    it('rejects words with non-alphabetical characters', function() {
+      list.add('woohoo!');
+      expect(list.toArray()).toEqual([]);
+    });
+
     it('strips spaces', function() {
       list.add(' pot ');
       expect(list.toArray()).toEqual('pot'.w());
