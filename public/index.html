@@ -6,6 +6,7 @@
 
       {{#view Ember.View contentBinding="Perquackey.list"}}
         Score: {{content.score}}
+        Letters: {{content.letters}}
       {{/view}}
 
       {{view Perquackey.Table listBinding="Perquackey.list" delegateBinding="Perquackey.list"}}

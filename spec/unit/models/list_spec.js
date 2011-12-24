@@ -115,4 +115,28 @@ describe('Perquackey.List', function() {
       expect(list.get('score')).toBe(1100);
     });
   });
+
+  describe('#letters', function() {
+    it('defaults to blank', function() {
+      expect(list.get('letters')).toEqual('');
+    });
+
+    it('includes all the unique letters seen, in alphabetical order', function() {
+      list.add('pot');
+      list.add('pat');
+      list.add('tap');
+      list.add('top');
+      list.add('hot');
+      expect(list.get('letters')).toEqual('ahopt');
+    });
+
+    it('retains duplicate letters within the same word', function() {
+      list.add('goat');
+      list.add('tree');
+      list.add('tear');
+      list.add('pear');
+      list.add('hear');
+      expect(list.get('letters')).toEqual('aeeghoprt');
+    });
+  });
 });
