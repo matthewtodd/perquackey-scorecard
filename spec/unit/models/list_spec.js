@@ -45,6 +45,22 @@ describe('Perquackey.List', function() {
     });
   });
 
+  describe('#remove', function() {
+    beforeEach(function() {
+      list.add('pot');
+    });
+
+    it('removes existing words', function() {
+      list.remove('pot');
+      expect(list.toArray()).toEqual([]);
+    });
+
+    it('silently accepts non-existing words', function() {
+      list.remove('pat');
+      expect(list.toArray()).toEqual('pot'.w());
+    });
+  });
+
   describe('#score', function() {
     it('defaults to zero', function() {
       expect(list.get('score')).toBe(0);

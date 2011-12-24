@@ -9,7 +9,7 @@ Perquackey.Field = Ember.TextField.extend({
     var word = this.get('value');
 
     if (word) {
-      this.get('list').add(word);
+      this.get('delegate').wordWasTyped(word);
       this.set('value', '');
     }
   }

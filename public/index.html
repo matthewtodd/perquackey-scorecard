@@ -2,14 +2,14 @@
 <html>
   <body>
     <script type="text/html">
-      {{view Perquackey.Field listBinding="Perquackey.list"}}
+      {{view Perquackey.Field delegateBinding="Perquackey.game"}}
 
-      {{#view Ember.View contentBinding="Perquackey.list"}}
+      {{#view Ember.View contentBinding="Perquackey.game.words"}}
         Score: {{content.score}}
         Letters: {{content.letters}}
       {{/view}}
 
-      {{view Perquackey.Table listBinding="Perquackey.list" delegateBinding="Perquackey.list"}}
+      {{view Perquackey.Table contentBinding="Perquackey.game.words" delegateBinding="Perquackey.game"}}
     </script>
 
     <script src="/assets/application.js"></script>

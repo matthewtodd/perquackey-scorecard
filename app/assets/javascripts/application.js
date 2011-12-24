@@ -1,3 +1,3 @@
 //= require_tree .
 
-Perquackey.list = Perquackey.List.create();
+Perquackey.game = Perquackey.GameController.create();

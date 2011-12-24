@@ -39,11 +39,11 @@ Perquackey.Table = Ember.View.extend({
     }
     $tbody.appendTo(this.$());
 
-  }, 'list.@each'),
+  }, 'content.@each'),
 
   _headers: function() {
     var numerically = function(a, b) { return a - b; }
-    var lengths = this.get('list').getEach('length').sort(numerically);
+    var lengths = this.get('content').getEach('length').sort(numerically);
 
     var headers = [];
     for (var i=lengths[0]; i<=lengths[lengths.length - 1]; i=i+1) {
@@ -53,7 +53,7 @@ Perquackey.Table = Ember.View.extend({
   },
 
   _rows: function() {
-    var words = this.get('list');
+    var words = this.get('content');
     var headers = this._headers();
 
     var table = {};
