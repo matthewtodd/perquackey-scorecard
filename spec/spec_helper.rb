@@ -20,7 +20,7 @@ step 'I type in :word' do |word|
   # help fix this problem.
   fill_in 'word', :with => word
   # TODO don't find the view by its internal id.
-  page.execute_script 'Ember.View.views.ember180.insertNewline()'
+  page.execute_script 'Ember.View.views.ember198.insertNewline()'
 end
 
 step 'I see these words:' do |expected|
