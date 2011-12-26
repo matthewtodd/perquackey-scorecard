@@ -1,2 +1,2 @@
 --colors
---jasmine-config spec/support/jasmine.yml
+--jasmine-config spec/jasmine.yml
