@@ -1,5 +1,33 @@
 <!doctype html>
 <html>
+  <head>
+    <meta charset="utf-8">
+    <title>Perquackey Scorecard</title>
+    <style>
+      body {
+        margin: 0 auto 5em;
+        width: 45em;
+      }
+      header, section {
+        padding: 0 1em 1em;
+      }
+      section.dictionary {
+        background-color: #eee;
+        border-top: 1px solid #ccc;
+        color: #999;
+      }
+      table {
+        border-collapse: collapse;
+      }
+      tbody tr:nth-child(5) td {
+        border-bottom: 1px dashed #ccc;
+      }
+      td, th {
+        padding-right: 1em;
+      }
+    </style>
+  </head>
+
   <body>
     <header>
       <h1>Perquackey</h1>
@@ -11,20 +39,14 @@
 
     <section>
       <script type="text/html">
-        <header>
-          {{#view Ember.View contentBinding="Perquackey.game" tagName="h1"}}Score: {{content.score}}{{/view}}
-        </header>
-
+        {{#view Ember.View contentBinding="Perquackey.game" tagName="h1"}}{{content.score}} points{{/view}}
         {{view Perquackey.Table contentBinding="Perquackey.game.words" delegateBinding="Perquackey.game"}}
       </script>
     </section>
 
-    <section>
+    <section class="dictionary">
       <script type="text/html">
-        <header>
-        {{#view Ember.View contentBinding="Perquackey.game" tagName="h1"}}Letters: {{content.letters}} ({{content.letters.length}}){{/view}}
-        </header>
-
+        {{#view Ember.View contentBinding="Perquackey.game" tagName="h1"}}{{content.letters}} ({{content.letters.length}}){{/view}}
         {{view Perquackey.Table contentBinding="Perquackey.dictionary.words"}}
       </script>
     </section>
