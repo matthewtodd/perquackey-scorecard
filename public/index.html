@@ -1,21 +1,33 @@
 <!doctype html>
 <html>
   <body>
-    <script type="text/html">
-      {{view Perquackey.Field delegateBinding="Perquackey.game"}}
+    <header>
+      <h1>Perquackey</h1>
 
-      {{#view Ember.View contentBinding="Perquackey.game"}}
-        Score: {{content.score}}
-      {{/view}}
+      <script type="text/html">
+        {{view Perquackey.Field delegateBinding="Perquackey.game"}}
+      </script>
+    </header>
 
-      {{view Perquackey.Table contentBinding="Perquackey.game.words" delegateBinding="Perquackey.game"}}
+    <section>
+      <script type="text/html">
+        <header>
+          {{#view Ember.View contentBinding="Perquackey.game" tagName="h1"}}Score: {{content.score}}{{/view}}
+        </header>
 
-      {{#view Ember.View contentBinding="Perquackey.game"}}
-        Letters: {{content.letters}}
-      {{/view}}
+        {{view Perquackey.Table contentBinding="Perquackey.game.words" delegateBinding="Perquackey.game"}}
+      </script>
+    </section>
 
-      {{view Perquackey.Table contentBinding="Perquackey.dictionary.words"}}
-    </script>
+    <section>
+      <script type="text/html">
+        <header>
+          {{#view Ember.View contentBinding="Perquackey.game" tagName="h1"}}Letters: {{content.letters}}{{/view}}
+        </header>
+
+        {{view Perquackey.Table contentBinding="Perquackey.dictionary.words"}}
+      </script>
+    </section>
 
     <script src="/assets/application.js"></script>
   </body>
