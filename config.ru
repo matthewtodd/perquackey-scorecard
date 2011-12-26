@@ -1,5 +1,10 @@
+require 'perquackey'
 require 'rack'
 require 'sprockets'
+
+map '/api' do
+  run Perquackey::Server.new
+end
 
 map '/assets' do
   environment = Sprockets::Environment.new

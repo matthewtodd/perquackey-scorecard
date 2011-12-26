@@ -6,10 +6,15 @@
 
       {{#view Ember.View contentBinding="Perquackey.game"}}
         Score: {{content.score}}
-        Letters: {{content.letters}}
       {{/view}}
 
       {{view Perquackey.Table contentBinding="Perquackey.game.words" delegateBinding="Perquackey.game"}}
+
+      {{#view Ember.View contentBinding="Perquackey.game"}}
+        Letters: {{content.letters}}
+      {{/view}}
+
+      {{view Perquackey.Table contentBinding="Perquackey.dictionary.words"}}
     </script>
 
     <script src="/assets/application.js"></script>

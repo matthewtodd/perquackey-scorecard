@@ -1,5 +1,6 @@
 source :rubygems
 
+gem 'perquackey'
 gem 'rack'
 gem 'sprockets'
 
