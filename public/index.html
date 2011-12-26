@@ -22,7 +22,7 @@
     <section>
       <script type="text/html">
         <header>
-          {{#view Ember.View contentBinding="Perquackey.game" tagName="h1"}}Letters: {{content.letters}}{{/view}}
+        {{#view Ember.View contentBinding="Perquackey.game" tagName="h1"}}Letters: {{content.letters}} ({{content.letters.length}}){{/view}}
         </header>
 
         {{view Perquackey.Table contentBinding="Perquackey.dictionary.words"}}
